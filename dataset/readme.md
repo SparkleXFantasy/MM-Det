@@ -43,14 +43,14 @@ python prepare_mm_representations.py --cached-data-root $RECONSTRUCTION_DATASET_
 ```
 | -- $MM_REPRESENTATION_ROOT
   | -- dataset A
-    | -- class A1
+    | -- 0_real
       | -- mm_representation.pth
-    | -- class A2
+    | -- 1_fake
       | -- mm_representation.pth
   | -- dataset B
-    | -- class B1
+    | -- 0_real
       | -- mm_representation.pth
-    | -- class B2
+    | -- 1_fake
       | -- mm_representation.pth
   ...
 ```

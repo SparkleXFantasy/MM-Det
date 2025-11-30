@@ -1,4 +1,4 @@
-python train.py \
+CUDA_VISIBLE_DEVICES=0 python train.py \
     --data-root ./data/DVF_recons \
     --classes youtube stablevideodiffusion \
     --cache-mm \

@@ -116,3 +116,20 @@ def get_test_dataset_configs(config):
             dataset_config[dataset_class]["selected_cls_labels"].append(("1_fake", 1))
         dataset_configs.append(dataset_config)
     return dataset_configs
+
+
+def get_customized_test_dataset_configs(config):
+    dataset_classes = config['classes']
+    dataset_configs = []
+
+    for dataset_class in dataset_classes:    # load fake datasets
+        dataset_config = {}
+        dataset_config[dataset_class] = {
+            "data_root": f'{config["data_root"]}/{dataset_class}',
+            "dataset_type": "VideoFolderDatasetForReconsWithFn",
+            "mode": config["mode"],
+            "selected_cls_labels": [("1_fake", 1), ("0_real", 0)],
+            "sample_method": 'entire',
+        }
+        dataset_configs.append(dataset_config)
+    return dataset_configs

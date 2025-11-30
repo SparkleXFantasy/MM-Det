@@ -26,6 +26,8 @@ This repository is the official implementation of [MM-Det](https://arxiv.org/abs
   - [Evaluation](#evaluation)
     - [Data Structure](#data-structure)
     - [Inference](#inference)
+      - [Inference on DVF](#inference-on-dvf)
+      - [Inference on customized datasets](#inference-on-customized-datasets)
   - [Training](#training)
     - [LMM Fine-tuning (Not necessary)](#lmm-fine-tuning-not-necessary)
     - [Overall Training](#overall-training)
@@ -112,7 +114,12 @@ For evaluation on the full version of DVF, download the data at [Reconstruction 
 For evaluation on customized dataset, details of data preparation can be found at [dataset/readme.md](dataset/readme.md).
 
 ### Inference
-Make sure the pre-trained weights are organized at `./weights`. Please set `$RECONSTRUCTION_DATASET_ROOT` and `$MM_REPRESENTATION_ROOT` as the data roots provided at [Data Structure](#data-structure) in `launch-test.sh`. `--cache-mm` is recommended for save the computational and memory cost of LMM branch. Then run `launch-test.sh` for testing on 7 datasets respectively.
+
+Make sure the pre-trained weights are organized at `./weights`. 
+
+#### Inference on DVF
+Please set `$RECONSTRUCTION_DATASET_ROOT` and `$MM_REPRESENTATION_ROOT` as the data roots provided at [Data Structure](#data-structure) in `launch-test.sh`.
+`--cache-mm` is recommended for save the computational and memory cost of LMM branch. Then run `launch-test.sh` for testing on 7 datasets respectively.
 
 ```bash
 python test.py \
@@ -127,6 +134,11 @@ python test.py \
 
 Since the entire evaluation is time-costing, `sample-size` can be specified (e.g., 1,000) to reduce time by conducting inference only on limited (1,000) videos. To finish the entire evaluation, please set `sample-size` as `-1`.
 
+#### Inference on customized datasets
+
+Make sure the data preparation is done at [dataset/readme.md](dataset/readme.md).
+Please set `$YOUR_CUSTOMIZED_DATA_ROOT` `$YOUR_CUSTOMIZED_CLASS_NAME` and `$MM_REPRESENTATION_ROOT` in `launch-test-customized.sh`.
+Then run `launch-test-customized.sh`.
 
 ## Training
 
