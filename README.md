@@ -79,11 +79,11 @@ We provide the [weights](https://huggingface.co/sparklexfantasy/llava-7b-1.5-rfr
 
 ### Reconstruction Dataset
 
-For the full version of DVF, we provide a ready reconstruction dataset at [BaiduNetDisk](https://pan.baidu.com/s/1a0sWzGXfkBfblV1wZ70qsQ?pwd=l8h4) (Code: l8h4).
+For the full version of DVF, we provide a ready reconstruction dataset at [huggingface](https://huggingface.co/datasets/sparklexfantasy/DVF) [BaiduNetDisk](https://pan.baidu.com/s/1a0sWzGXfkBfblV1wZ70qsQ?pwd=l8h4) (Code: l8h4).
 
 ### Multi-Modal Forgery Representation
 
-For the full version of DVF, we provide a ready dataset for cached MMFR at [BaiduNetDisk](https://pan.baidu.com/s/1kuybGikCfxs8CnTnxWI-gQ?pwd=m6uy) (Code: m6uy). Since the representation is fixed during training and inference, it is recommended to cache the representation before the overall training to reduce time cost. 
+For the full version of DVF, we provide a ready dataset for cached MMFR at [huggingface](https://huggingface.co/datasets/sparklexfantasy/DVF) [BaiduNetDisk](https://pan.baidu.com/s/1kuybGikCfxs8CnTnxWI-gQ?pwd=m6uy) (Code: m6uy). Since the representation is fixed during training and inference, it is recommended to cache the representation before the overall training to reduce time cost. 
 
 ## Evaluation
 
